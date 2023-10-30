@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -41,7 +41,7 @@ const projectArr = [
   },
 ];
 
-const Project = () => {
+const Project = forwardRef((props, ref) => {
   const settings = {
     focusOnSelect: true,
     centerMode: true,
@@ -52,7 +52,10 @@ const Project = () => {
     centerPadding: "25%",
   };
   return (
-    <div className="project">
+    <section
+      ref={(projectRef) => (ref.current[2] = projectRef)}
+      className="project"
+    >
       <div className="project-top">
         <div className="project-bar" />
         <span className="project-title">Project</span>
@@ -62,8 +65,8 @@ const Project = () => {
           <ProjectBox id={e.id} content={e} />
         ))}
       </Slider>
-    </div>
+    </section>
   );
-};
+});
 
 export default Project;

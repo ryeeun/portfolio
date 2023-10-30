@@ -1,0 +1,8 @@
+.project-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vW;
+    height: 100vh;
+    background-color: white;
+}

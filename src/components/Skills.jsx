@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 
 import "../css/Skills.css";
 import SkillBox from "./SkillBox";
 
-const Skills = () => {
+const Skills = forwardRef((props, ref) => {
   const [navArr, setArr] = useState([
     {
       id: 1,
@@ -104,7 +104,7 @@ const Skills = () => {
     );
   };
   return (
-    <div className="skills">
+    <section ref={(skillRef) => (ref.current[1] = skillRef)} className="skills">
       <div className="skills-title">Skills</div>
       <div className="skills-nav">
         {navArr.map((elem) => (
@@ -130,8 +130,8 @@ const Skills = () => {
           <SkillBox id={index} skill={item} />
         ))}
       </div>
-    </div>
+    </section>
   );
-};
+});
 
 export default Skills;

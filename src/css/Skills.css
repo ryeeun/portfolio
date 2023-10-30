@@ -1,5 +1,5 @@
 .skills {
-    padding: 2em 0 10em 0;
+    padding: 10em 0 10em 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,6 +62,9 @@
 }
 
 @media (max-width: 800px) {
+    .skills {
+        padding-top: 5em;
+    }
     .skills-contents {
         display: flex;
         flex-direction: column;

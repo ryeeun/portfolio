@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import "../css/Header.css";
 
-const Header = () => {
+const Header = ({ scrollRef }) => {
+  const [navIndex, setNavIndex] = useState(null);
+  const navRef = useRef([]);
+
   const [scrollPosition, setScrollPosition] = useState(0);
   const updateScroll = () => {
     setScrollPosition(window.scrollY || document.documentElement.scrollTop);
@@ -12,6 +15,11 @@ const Header = () => {
     window.addEventListener("scroll", updateScroll);
   });
 
+  useEffect(() => {
+    scrollRef.current[navIndex]?.scrollIntoView({ behavior: "smooth" });
+    setNavIndex(null);
+  }, [scrollRef, navIndex]);
+
   return (
     <div
       className={
@@ -19,9 +27,27 @@ const Header = () => {
       }
     >
       <ul className="header-ul">
-        <li className="header-ul-item">ABOUT</li>
-        <li className="header-ul-item">SKILL</li>
-        <li className="header-ul-item">PROJECT</li>
+        <li
+          ref={(ref) => (navRef.current[0] = ref)}
+          className="header-ul-item"
+          onClick={() => setNavIndex(0)}
+        >
+          ABOUT
+        </li>
+        <li
+          ref={(ref) => (navRef.current[1] = ref)}
+          className="header-ul-item"
+          onClick={() => setNavIndex(1)}
+        >
+          SKILL
+        </li>
+        <li
+          ref={(ref) => (navRef.current[2] = ref)}
+          className="header-ul-item"
+          onClick={() => setNavIndex(2)}
+        >
+          PROJECT
+        </li>
       </ul>
     </div>
   );
