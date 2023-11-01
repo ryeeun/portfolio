@@ -17,3 +17,19 @@
 .project-details a {
     color: black;
 }
+
+.project-details-stacks {
+    margin-top: 1em;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.project-details-stack {
+    background-color: #3a5a40c1;
+    color: white;
+    border-radius: 1em;
+    padding: 0.2em 1em;
+    font-size: 1em;
+}

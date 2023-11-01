@@ -35,10 +35,10 @@ const projectArr = [
   {
     id: 4,
     image: "Farmer",
-    type: "Web",
+    type: "PWA",
     title: "Farmer",
     desc: "AI를 활용한 수확 예측 홈 파밍 애플리케이션",
-    stack: ["React", "JavaScript", "CSS", "HTML", "PWA"],
+    stack: ["React", "JavaScript", "CSS", "HTML"],
   },
 ];
 

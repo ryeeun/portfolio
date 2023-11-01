@@ -10,7 +10,11 @@ const ProjectDetails = ({ details }) => {
       <span className="project-details-type">수행기간</span>
       <span className="project-details-content">{details.period}</span>
       <span className="project-details-type">기술스택</span>
-      <span className="project-details-content">{details.stack}</span>
+      <span className="project-details-stacks">
+        {details.stack.map((e) => (
+          <div className="project-details-stack">{e}</div>
+        ))}
+      </span>
       <span className="project-details-type">팀 구성</span>
       <span className="project-details-content">{details.team}</span>
       <span className="project-details-type">링크</span>
