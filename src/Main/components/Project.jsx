@@ -43,19 +43,26 @@ const projectArr = [
 ];
 
 const Project = forwardRef((props, ref) => {
-  // const [currIdx, setCurrIdx] = useState(0);
-  const location = useLocation();
-  const id = location.state !== null ? location.state.id : null;
+  const [currIdx, setCurrIdx] = useState(
+    () => JSON.parse(window.localStorage.getItem("idx")) || 1
+  );
+
+  // const location = useLocation();
+  // const id = location.state !== null ? location.state.id : null;
+  useEffect(() => {
+    window.localStorage.setItem("idx", JSON.stringify(currIdx + 1));
+  }, [currIdx]);
 
   const settings = {
     focusOnSelect: true,
     centerMode: true,
     infinite: true,
-    initialSlide : id === null ? 0 : id - 1,
+    initialSlide: currIdx - 1,
     slidesToShow: 1,
     arrows: true,
     speed: 700,
     centerPadding: "25%",
+    afterChange: (current, next) => setCurrIdx(current),
   };
 
   return (
@@ -67,7 +74,6 @@ const Project = forwardRef((props, ref) => {
         <div className="project-bar" />
         <span className="project-title">Project</span>
       </div>
-      <span>{id}</span>
       <Slider {...settings}>
         {projectArr.map((e) => (
           <ProjectBox id={e.id} content={e} />
