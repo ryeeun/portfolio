@@ -26,7 +26,7 @@ const projectArr = [
   },
   {
     id: 3,
-    image: "tecono",
+    image: "Tecono",
     type: "Web",
     title: "T-ECONO",
     desc: "개발 기술 공유 블로그",
