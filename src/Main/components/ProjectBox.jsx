@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "../css/ProjectBox.css";
-import ProjectInfo from "./ProjectInfo";
 
 const ProjectBox = ({ content }) => {
-  const [openInfo, setOpenInfo] = useState(false);
-  const onClick = () => {
-    setOpenInfo((cur) => !cur);
-  };
   return (
     <div className="project-box">
       <img
@@ -25,10 +20,7 @@ const ProjectBox = ({ content }) => {
           ))}
         </div>
       </div>
-      <button className="project-box-open" onClick={() => onClick()}>
-        +
-      </button>
-      {openInfo && <ProjectInfo />}
+      <button className="project-box-open">+</button>
     </div>
   );
 };
