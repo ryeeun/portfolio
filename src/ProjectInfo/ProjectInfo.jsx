@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../css/ProjectInfo.css";
+import "./ProjectInfo.css";
 
 const ProjectInfo = () => {
   return <div className="project-info"></div>;
