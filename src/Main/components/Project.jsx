@@ -1,4 +1,5 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -42,15 +43,21 @@ const projectArr = [
 ];
 
 const Project = forwardRef((props, ref) => {
+  // const [currIdx, setCurrIdx] = useState(0);
+  const location = useLocation();
+  const id = location.state !== null ? location.state.id : null;
+
   const settings = {
     focusOnSelect: true,
     centerMode: true,
     infinite: true,
+    initialSlide : id === null ? 0 : id - 1,
     slidesToShow: 1,
     arrows: true,
     speed: 700,
     centerPadding: "25%",
   };
+
   return (
     <section
       ref={(projectRef) => (ref.current[2] = projectRef)}
@@ -60,6 +67,7 @@ const Project = forwardRef((props, ref) => {
         <div className="project-bar" />
         <span className="project-title">Project</span>
       </div>
+      <span>{id}</span>
       <Slider {...settings}>
         {projectArr.map((e) => (
           <ProjectBox id={e.id} content={e} />

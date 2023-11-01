@@ -1,3 +1,6 @@
+.about {
+}
+
 .about-background {
     background-color: #f2f2f2;
     height: 90vh;
@@ -31,17 +34,18 @@
 .about-me {
     position: relative;
     width: 75%;
+    height: 90vh;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 14em;
+    padding-top: 4em;
     margin-bottom: 14em;
 }
 
 .about-me-left {
-    margin-bottom: auto;
+    margin-bottom: 8em;
     font-family: 'Noto Sans', sans-serif;
 }
 
@@ -102,7 +106,7 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .about-text-box {
         flex-direction: column;
         align-items: start;
@@ -111,7 +115,11 @@
     .about-me {
         flex-direction: column;
         height: fit-content;
-        padding-top: 5em;
+        padding-top: 10em;
+    }
+
+    .about-me-left {
+        margin-bottom: auto;
     }
 
     .about-me-img {
