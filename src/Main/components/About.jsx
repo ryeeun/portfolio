@@ -37,7 +37,11 @@ const About = forwardRef((props, ref) => {
           <span className="about-me-name">LEE HYE EUN</span>
           <p className="about-me-frontend">FRONTEND DEVELOPER</p>
         </div>
-        <div className="about-me-img"></div>
+        <img
+          className="about-me-img"
+          src={`${process.env.PUBLIC_URL}/img/me.jpg`}
+          alt="profile"
+        />
         <div className="about-me-text">
           <div className="about-me-box about-me-box-left">
             <span>Email</span>
