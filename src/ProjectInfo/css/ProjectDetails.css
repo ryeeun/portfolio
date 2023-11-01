@@ -1,0 +1,19 @@
+.project-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-details-type {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 2em 0 0.3em 0;
+}
+
+.project-details-content {
+    font-size: 1em;
+    font-size: 500;
+}
+
+.project-details a {
+    color: black;
+}

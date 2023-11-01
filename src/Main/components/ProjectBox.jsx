@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "../css/ProjectBox.css";
 
@@ -20,7 +21,9 @@ const ProjectBox = ({ content }) => {
           ))}
         </div>
       </div>
-      <button className="project-box-open">+</button>
+      <Link to={`/project/${content.id}`} className="project-box-open">
+        +
+      </Link>
     </div>
   );
 };
