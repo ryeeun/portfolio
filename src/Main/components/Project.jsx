@@ -44,13 +44,13 @@ const projectArr = [
 
 const Project = forwardRef((props, ref) => {
   const [currIdx, setCurrIdx] = useState(
-    () => JSON.parse(window.localStorage.getItem("idx")) || 1
+    () => JSON.parse(window.sessionStorage.getItem("idx")) || 1
   );
 
   // const location = useLocation();
   // const id = location.state !== null ? location.state.id : null;
   useEffect(() => {
-    window.localStorage.setItem("idx", JSON.stringify(currIdx + 1));
+    window.sessionStorage.setItem("idx", JSON.stringify(currIdx + 1));
   }, [currIdx]);
 
   const settings = {
