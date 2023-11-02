@@ -72,6 +72,7 @@
     }
 
     .skills__nav-item {
-        width: 20vw;
+        width: 25vw;
+        font-size: 16px;
     }
 }
