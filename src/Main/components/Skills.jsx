@@ -16,19 +16,19 @@ const Skills = forwardRef((props, ref) => {
         },
         {
           name: "HTML",
-          percent: 60,
-        },
-        {
-          name: "CSS",
-          percent: 60,
-        },
-        {
-          name: "JAVA",
           percent: 70,
         },
         {
+          name: "CSS",
+          percent: 70,
+        },
+        {
+          name: "JAVA",
+          percent: 80,
+        },
+        {
           name: "C#",
-          percent: 40,
+          percent: 30,
         },
       ],
     },
@@ -47,11 +47,11 @@ const Skills = forwardRef((props, ref) => {
         },
         {
           name: "Unity",
-          percent: 50,
+          percent: 30,
         },
         {
           name: "Android Studio",
-          percent: 40,
+          percent: 30,
         },
       ],
     },
@@ -62,15 +62,15 @@ const Skills = forwardRef((props, ref) => {
       stacks: [
         {
           name: "Git",
-          percent: 60,
+          percent: 70,
         },
         {
           name: "Slack",
-          percent: 80,
+          percent: 70,
         },
         {
           name: "Notion",
-          percent: 80,
+          percent: 70,
         },
         {
           name: "Figma",
@@ -78,11 +78,11 @@ const Skills = forwardRef((props, ref) => {
         },
         {
           name: "Firebase",
-          percent: 40,
+          percent: 30,
         },
         {
           name: "MySQL",
-          percent: 40,
+          percent: 30,
         },
       ],
     },
