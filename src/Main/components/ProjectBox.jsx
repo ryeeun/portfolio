@@ -16,8 +16,10 @@ const ProjectBox = ({ content }) => {
         <span className="project-box-info-title">{content.title}</span>
         <span className="project-box-info-desc">{content.desc}</span>
         <div className="project-box-info-stacks">
-          {content.stack.map((e) => (
-            <div className="project-box-info-stack">{e}</div>
+          {content.stack.map((e, index) => (
+            <div key={index} className="project-box-info-stack">
+              {e}
+            </div>
           ))}
         </div>
       </div>

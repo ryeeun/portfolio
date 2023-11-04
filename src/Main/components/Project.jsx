@@ -1,5 +1,4 @@
 import React, { forwardRef, useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -76,7 +75,7 @@ const Project = forwardRef((props, ref) => {
       </div>
       <Slider {...settings}>
         {projectArr.map((e) => (
-          <ProjectBox id={e.id} content={e} />
+          <ProjectBox key={e.id} id={e.id} content={e} />
         ))}
       </Slider>
     </section>

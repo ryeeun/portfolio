@@ -32,99 +32,9 @@
     }
 }
 
-.about-me {
-    position: relative;
-    width: 75%;
-    height: 90vh;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 4em;
-    margin-bottom: 14em;
-}
-
-.about-me-left {
-    margin-bottom: 10em;
-    font-family: 'Noto Sans', sans-serif;
-}
-
-.about-me-name {
-    color: #3a5a40;
-    font-size: 6.5vh;
-    text-align: left;
-    height: fit-content;
-    margin-bottom: 2em;
-    font-weight: 600;
-    position: relative;
-    top: -10px;
-}
-
-.about-me-frontend {
-    margin-top: 0em;
-    font-size: 1.5em;
-    text-align: left;
-    font-weight: 500;
-    font-style: italic;
-}
-
-.about-me-img {
-    width: 17em;
-    height: 17em;
-    background-color: #f3f4f5;
-}
-
-.about-me-text {
-    display: flex;
-    font-size: 1em;
-}
-
-.about-me-box {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    height: 150px;
-    justify-content: space-between;
-    font-family: 'Noto Sans', sans-serif;
-}
-
-.about-me-box a {
-    text-decoration: none;
-    color: black;
-}
-
-.about-me-box-left {
-    font-family: 'Noto Sans', sans-serif;
-    margin-right: 2em;
-    font-weight: 700;
-    color: #3a5a40;
-}
-
-.about-me-box-right {
-    color: #113023;
-    font-weight: 500;
-    font-family: 'Noto Sans KR', sans-serif;
-}
-
 @media (max-width: 1000px) {
     .about-text-box {
         flex-direction: column;
         align-items: start;
-    }
-
-    .about-me {
-        flex-direction: column;
-        height: fit-content;
-        padding-top: 10em;
-    }
-
-    .about-me-left {
-        margin-bottom: auto;
-    }
-
-    .about-me-img {
-        margin-bottom: 25px;
-        margin-right: 0px;
     }
 }
