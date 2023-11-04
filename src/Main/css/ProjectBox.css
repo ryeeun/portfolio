@@ -92,4 +92,10 @@
     .project-box-info-title {
         margin-bottom: 1.2vw;
     }
+
+    .project-box-open {
+        width: 5vw;
+        height: 5vw;
+        font-size: 3vw;
+    }
 }
