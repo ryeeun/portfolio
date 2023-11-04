@@ -32,14 +32,14 @@ const AboutMe = forwardRef((props, ref) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            ryeeun
+            https://github.com/ryeeun
           </a>
           <a
             href="https://flfpdms753.tistory.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            tistory
+            https://flfpdms753.tistory.com/
           </a>
         </div>
       </div>
