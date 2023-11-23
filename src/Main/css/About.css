@@ -37,4 +37,10 @@
         flex-direction: column;
         align-items: start;
     }
+
+    .about-text-big {
+        font-size: 14vw;
+        letter-spacing: 2px;
+    }
+    
 }
