@@ -14,7 +14,7 @@ const AboutMe = forwardRef((props, ref) => {
       </div>
       <img
         className="about-me-img"
-        src={`${process.env.PUBLIC_URL}/img/me.jpg`}
+        src={`${process.env.PUBLIC_URL}/img/me_.jpg`}
         alt="profile"
       />
       <div className="about-me-text">
